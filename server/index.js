@@ -8,8 +8,6 @@ import postRoutes from './routes/posts.js'
 
 const app = express()
 
-
-
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors())
@@ -18,6 +16,10 @@ app.use('/posts', postRoutes)
 
 const CONNECTION_URL =
   'mongodb+srv://shahnewaztameem:T@meem141@jupiternotebook.3jtsy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+
+app.get('/', (req, res) => {
+  res.send('Hello API')
+})
 
 const PORT = process.env.PORT || 5000
 mongoose
