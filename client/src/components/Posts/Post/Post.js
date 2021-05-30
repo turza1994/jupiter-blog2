@@ -50,6 +50,14 @@ const Post = ({ post, setCurrentId }) => {
       </div>
       <Typography
         className={classes.title}
+        variant='body2'
+        color='textSecondary'
+        component='p'
+      >
+        {post.title}
+      </Typography>
+      <Typography
+        className={classes.title}
         gutterBottom
         variant='h5'
         component='h2'
@@ -57,7 +65,11 @@ const Post = ({ post, setCurrentId }) => {
         {post.title}
       </Typography>
       <CardContent>
-        <Typography variant='body2' color='textSecondary' component='p'>
+        <Typography
+          variant='body2'
+          color='textSecondary'
+          component='p'
+        >
           {post.message}
         </Typography>
       </CardContent>
